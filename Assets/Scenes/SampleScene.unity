@@ -215,11 +215,11 @@ GameObject:
   - component: {fileID: 91032552}
   m_Layer: 0
   m_Name: ScoreCollierTop
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &91032551
 Transform:
   m_ObjectHideFlags: 0
@@ -626,9 +626,9 @@ GameObject:
   m_Component:
   - component: {fileID: 742175412}
   - component: {fileID: 742175413}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GoalPlayerColliderBottom
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -641,7 +641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742175411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -7}
+  m_LocalPosition: {x: 0, y: 1, z: -8}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1832347039}
@@ -706,11 +706,11 @@ GameObject:
   - component: {fileID: 864759759}
   m_Layer: 0
   m_Name: ScoreCollierBottom
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &864759758
 Transform:
   m_ObjectHideFlags: 0
@@ -747,6 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015430874}
+  - component: {fileID: 1015430875}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -773,6 +774,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015430875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015430873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8cdc0ce480f58a4b9158d70d0035324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _puck: {fileID: 0}
 --- !u!1 &1116493998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,9 +1284,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1451034899}
   - component: {fileID: 1451034900}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GoalPlayerColliderTop
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,7 +1299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451034898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 7}
+  m_LocalPosition: {x: 0, y: 1, z: 8}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1832347039}
@@ -1794,9 +1808,10 @@ GameObject:
   - component: {fileID: 2010745688}
   - component: {fileID: 2010745687}
   - component: {fileID: 2010745691}
+  - component: {fileID: 2010745692}
   m_Layer: 10
   m_Name: Puck
-  m_TagString: Untagged
+  m_TagString: Puck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1888,5 +1903,17 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 116
   m_CollisionDetection: 1
+--- !u!114 &2010745692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010745686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35a4faae4624614d835bbfd226dcaae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
