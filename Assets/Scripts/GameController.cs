@@ -32,11 +32,6 @@ public class GameController : MonoBehaviour
     private int[] scorePoints = new int[2];
     float startPosition = 1.2f;
 
-    private void Start()
-    {
-
-    }
-
     public void Goal(int whoScored)
     {
         scorePoints[whoScored]++;
@@ -48,8 +43,8 @@ public class GameController : MonoBehaviour
         _player0.transform.position = _player0.GetComponent<Paddle>().StartPosition;
         _player0.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-        //_player1.transform.position = _player1.GetComponent<Paddle>().StartPosition;
-        //_player1.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        _player1.transform.position = _player1.GetComponent<Paddle>().StartPosition;
+        _player1.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         _puck.GetComponent<Rigidbody>().velocity = Vector3.zero;
         _puck.gameObject.transform.position = new Vector3(0, 0, startPosition * (whoIsTheTurn == 0 ? 1 : -1));

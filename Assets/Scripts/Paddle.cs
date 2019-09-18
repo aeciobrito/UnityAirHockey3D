@@ -5,6 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     [SerializeField] float _speed;
+    [SerializeField] int _playerNumber;
     private Rigidbody _rigidBody;
     private Vector3 _movement;
 
@@ -29,8 +30,8 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _movement.x = Input.GetAxisRaw("Horizontal");
-        _movement.z = Input.GetAxisRaw("Vertical");
+        _movement.x = Input.GetAxisRaw("Horizontal" + _playerNumber);
+        _movement.z = Input.GetAxisRaw("Vertical" + _playerNumber);
     }
 
     private void FixedUpdate()
