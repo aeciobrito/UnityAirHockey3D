@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     #region singleton
@@ -28,14 +28,21 @@ public class GameController : MonoBehaviour
     #endregion
 
     [SerializeField] GameObject _player0, _player1, _puck;
+    [SerializeField] Text _player0Score, _player1Score;
 
     private int[] scorePoints = new int[2];
     float startPosition = 1.2f;
+
+    private void Start()
+    {
+        UpdateScore();
+    }
 
     public void Goal(int whoScored)
     {
         scorePoints[whoScored]++;
         ResetPositions(whoScored);
+        UpdateScore();
     }
 
     public void ResetPositions(int whoIsTheTurn)
@@ -49,5 +56,11 @@ public class GameController : MonoBehaviour
         _puck.GetComponent<Rigidbody>().velocity = Vector3.zero;
         _puck.gameObject.transform.position = new Vector3(0, 0, startPosition * (whoIsTheTurn == 0 ? 1 : -1));
 
+    }
+
+    public void UpdateScore()
+    {
+        _player0Score.text = "SCORE: " + scorePoints[0];
+        _player1Score.text = "SCORE: " + scorePoints[1];
     }
 }
